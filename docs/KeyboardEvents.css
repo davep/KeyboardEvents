@@ -1,1 +1,23 @@
-/* TODO */
+body {
+    background-color: black;
+    color: white;
+}
+
+table, th, td {
+    border: solid 1px #666666;
+}
+
+td, th {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 4em;
+    text-align: center;
+}
+
+th {
+    background-color: #444444;
+}
+
+td:nth-child( 1 ) {
+    font-weight: bold;
+}
