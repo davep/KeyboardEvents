@@ -7,6 +7,17 @@ function handleKey( e ) {
     var table = document.getElementById( "events" );
     var row   = table.insertRow( 1 );
 
-    add( row, e.key );
-    add( row, e.keyCode );
+    [
+        e.key,
+        e.keyCode,
+        e.altKey,
+        e.ctrlKey,
+        e.metaKey,
+        e.shiftKey,
+        e.repeat,
+        e.isComposing,
+        e.location
+    ].map( function ( val ) {
+        add( row, val );
+    } );
 }
