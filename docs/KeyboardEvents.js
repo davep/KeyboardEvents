@@ -4,8 +4,7 @@ function add( row, s ) {
 
 function handleKey( e ) {
 
-    var table = document.getElementById( "events" );
-    var row   = table.insertRow( 1 );
+    var row = document.getElementById( "events" ).insertRow( 1 );
 
     [
         e.key,
