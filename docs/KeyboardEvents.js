@@ -2,6 +2,10 @@ function add( row, s ) {
     row.insertCell().append( document.createTextNode( s ) );
 }
 
+function emojibool( b ) {
+    return b ? "✅" : "❌";
+}
+
 function handleKey( e ) {
 
     var row = document.getElementById( "events" ).insertRow( 1 );
@@ -9,12 +13,12 @@ function handleKey( e ) {
     [
         e.key,
         e.keyCode,
-        e.altKey,
-        e.ctrlKey,
-        e.metaKey,
-        e.shiftKey,
+        emojibool( e.altKey ),
+        emojibool( e.ctrlKey ),
+        emojibool( e.metaKey ),
+        emojibool( e.shiftKey ),
         e.repeat,
-        e.isComposing,
+        emojibool( e.isComposing ),
         e.location
     ].map( function ( val ) {
         add( row, val );
