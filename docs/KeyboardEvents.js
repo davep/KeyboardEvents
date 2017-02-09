@@ -1,7 +1,3 @@
-function add( row, s ) {
-    row.insertCell().append( document.createTextNode( s ) );
-}
-
 function emojibool( b ) {
     return b ? "✅" : "❌";
 }
@@ -41,6 +37,6 @@ function handleKey( e ) {
         emojibool( e.isComposing ),
         describeLocation( e.location )
     ].map( function ( val ) {
-        add( row, val );
+        row.insertCell().append( document.createTextNode( val ) );
     } );
 }
