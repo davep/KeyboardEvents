@@ -20,7 +20,7 @@ function describeLocation( loc ) {
     }
 
     return "Unknown";
-};
+}
 
 function handleKey( e ) {
 
