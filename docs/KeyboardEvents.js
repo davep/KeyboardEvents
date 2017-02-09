@@ -37,7 +37,7 @@ function handleKey( e ) {
         emojibool( e.ctrlKey ),
         emojibool( e.metaKey ),
         emojibool( e.shiftKey ),
-        e.repeat,
+        emojibool( e.repeat ),
         emojibool( e.isComposing ),
         describeLocation( e.location )
     ].map( function ( val ) {
